@@ -14,8 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from webapp.views import home
+from personas.views import crear_familiar, crear_familiares
 from django.urls import path
 
 urlpatterns = [
+    path('', home, name='index'),
+    path('crear-familiar/<str:nombre>/<str:apellido>/<int:edad>/<str:email>/', crear_familiar),
+    path('crear-familiares/', crear_familiares),
     path('admin/', admin.site.urls),
 ]

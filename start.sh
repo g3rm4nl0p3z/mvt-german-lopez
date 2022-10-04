@@ -5,4 +5,4 @@ then
     deactivate
 fi
 
-. ./venv-mvt-german-lopez/Scripts/activate
+. venv-mvt-german-lopez/Scripts/activate
